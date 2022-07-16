@@ -1,0 +1,30 @@
+html, body {
+  width: 100%;
+  background-color: hsl(190,99,99);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+p, a {
+  font-size: 1rem;
+}
+
+input {
+  padding: 15px;
+  margin: 10px;
+  font-size: 1rem;
+  min-width: 200px;
+  border-radius: 20px;
+  border: solid 1px;
+  &[type="submit"]{
+    background-color: white;
+    &:hover{
+      outline: solid 2px;
+      cursor: pointer;
+    }
+  }
+}

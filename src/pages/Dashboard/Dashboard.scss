@@ -1,0 +1,51 @@
+@use "src/variables" as vars;
+.Dashboard {
+  margin: vars.$default-distance;
+  @include vars.gridCenter;
+  hr{
+    width: 100%;
+  }
+  .all-members {
+    justify-self: start;
+    >* {
+      margin: vars.$default-distance/4;
+    }
+    li {
+      position: relative;
+      list-style: none;
+      margin-left: 10px;
+      padding: 2px;
+      &:before{
+        transition: all 0.3s ease-in-out;
+        content: '';
+        position: absolute;
+        width: 5px;
+        border-radius: 50%;
+        height: 5px;
+        top: 50%;
+        left: -10px;
+        transform: translateY(-47%);
+        background-color: black;
+      }
+      &:hover:before{
+        @keyframes pulsing {
+          0% {
+            transform: translateY(-47%) scale(2);
+          }
+          50% {
+            transform: translateY(-47%) translateX(-100%) scale(1.3);
+            background-color: darkgray;
+          }
+          100% {
+            transform: translateY(-47%) scale(2);
+          }
+        }
+        transform: translateY(-47%) scale(2);
+        animation: pulsing infinite 1s 500ms ease-in-out;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}

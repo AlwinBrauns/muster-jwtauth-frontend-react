@@ -1,0 +1,6 @@
+@use "src/variables" as vars;
+.Home {
+  margin: vars.$default-distance;
+  @include vars.gridCenter;
+  gap: 20px;
+}

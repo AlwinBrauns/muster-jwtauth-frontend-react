@@ -1,0 +1,16 @@
+$default-distance: 20px;
+@mixin gridCenter() {
+  display: grid;
+  place-items: center;
+}
+@mixin basicFormComponent() {
+  @include gridCenter;
+  margin: $default-distance;
+  h2 {
+    margin: $default-distance / 2;
+  }
+  form{
+    @include gridCenter;
+    justify-items: stretch;
+  }
+}

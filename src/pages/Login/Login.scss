@@ -1,0 +1,4 @@
+@use "src/variables" as vars;
+.Login {
+  @include vars.basicFormComponent;
+}
